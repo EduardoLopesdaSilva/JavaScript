@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERTRUBO - Cadastro de Jogador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .brand-gradient {
+            background: linear-gradient(90deg, #006341 0%, #1a3a2d 100%);
+        }
+        .brand-text {
+            color: #006341;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header similar ao da imagem -->
+    <header class="brand-gradient text-white py-4 px-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Os Boleiros</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:underline">Esportes</a>
+                <a href="#" class="hover:underline">Homens</a>
+                <a href="#" class="hover:underline">Mulheres</a>
+                <a href="#" class="hover:underline">Crianças</a>
+            </nav>
+        </div>
+    </header>
+            <!-- Título com estilo similar ao da imagem -->
+            <div class="bg-gray-100 px-6 py-4 border-b">
+                <h2 class="text-2xl font-bold brand-text">CADASTRO DE JOGADOR</h2>
+            </div>
+
+            <form class="p-6 space-y-6">
+                <!-- Seção de informações pessoais -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                    </div>
+                    <div>
+                        <label for="data-nascimento" class="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                    </div>
+                    <div>
+                        <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                    </div>
+                </div>
+
+                <!-- Seção de características do jogador - similar aos filtros da imagem -->
+                <div class="border border-gray-200 rounded-md p-4">
+                    <legend class="text-lg font-medium text-gray-700 px-2">Características do Jogador</legend>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Posição Principal</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                                <option value="">Selecione</option>
+                                <option value="goleiro">Goleiro</option>
+                                <option value="zagueiro">Zagueiro</option>
+                                <option value="lateral">Lateral</option>
+                                <option value="volante">Volante</option>
+                                <option value="meia">Meia</option>
+                                <option value="atacante">Atacante</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Pé Dominante</label>
+                            <div class="flex space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="pe-dominante" value="direito" class="h-4 w-4 text-green-600">
+                                    <span class="ml-2 text-gray-700">Direito</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="pe-dominante" value="esquerdo" class="h-4 w-4 text-green-600">
+                                    <span class="ml-2 text-gray-700">Esquerdo</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="pe-dominante" value="ambidestro" class="h-4 w-4 text-green-600">
+                                    <span class="ml-2 text-gray-700">Ambidestro</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Altura (cm)</label>
+                            <input type="number" min="100" max="250" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de equipamentos - inspirada nos produtos da imagem -->
+                <div class="border border-gray-200 rounded-md p-4">
+                    <legend class="text-lg font-medium text-gray-700 px-2">Equipamentos Preferidos</legend>
+                    
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Marcas Preferidas</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="marcas" value="adidas" class="h-4 w-4 text-green-600 rounded">
+                                <span class="ml-2 text-gray-700">adidas</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="marcas" value="nike" class="h-4 w-4 text-green-600 rounded">
+                                <span class="ml-2 text-gray-700">Nike</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="marcas" value="puma" class="h-4 w-4 text-green-600 rounded">
+                                <span class="ml-2 text-gray-700">Puma</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="marcas" value="asics" class="h-4 w-4 text-green-600 rounded">
+                                <span class="ml-2 text-gray-700">ASICS</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tamanho de Camisa</label>
+                        <select class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                            <option value="">Selecione</option>
+                            <option value="PP">PP</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XGG">XGG</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Botão de submit -->
+                <div class="pt-4">
+                    <button type="submit" 
+                            class="w-full brand-gradient text-white py-3 px-4 rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 font-semibold text-lg transition-colors">
+                        CADASTRAR JOGADOR
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Seção de jogadores cadastrados -->
+        <div class="max-w-4xl mx-auto mt-10 bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-gray-100 px-6 py-4 border-b">
+                <h2 class="text-2xl font-bold brand-text">JOGADORES CADASTRADOS</h2>
+            </div>
+            <div class="p-6">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Posição</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Marca Preferida</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Exemplo de linha - seria preenchido dinamicamente -->
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Carlos Silva</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Atacante</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Nike</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    <a href="#" class="text-green-600 hover:text-green-800 mr-3">Editar</a>
+                                    <a href="#" class="text-red-600 hover:text-red-800">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Esportes</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Futebol</a></li>
+                        <li><a href="#" class="hover:underline">Basquete</a></li>
+                        <li><a href="#" class="hover:underline">Corrida</a></li>
+                        <li><a href="#" class="hover:underline">Ciclismo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produtos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Calçados</a></li>
+                        <li><a href="#" class="hover:underline">Roupas</a></li>
+                        <li><a href="#" class="hover:underline">Acessórios</a></li>
+                        <li><a href="#" class="hover:underline">Outlet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Marcas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">adidas</a></li>
+                        <li><a href="#" class="hover:underline">Nike</a></li>
+                        <li><a href="#" class="hover:underline">Puma</a></li>
+                        <li><a href="#" class="hover:underline">ASICS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <p class="mb-2">Email: contato@certrubo.com.br</p>
+                    <p>Telefone: (11) 4004-0000</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2023 CERTRUBO. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

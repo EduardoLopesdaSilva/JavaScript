@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro De Eventos</title>
+</head>
+<body>
+    <h1>Cadastro de Eventos</h1>
+    <form id="formEventos">
+    
+        <div class="form-group">
+            <label for="local">Local do Evento</label>
+            <input type="text" id="local" name="local" required> <br>
+            <br>
+            <label for="DatadoEvento">Data de Evento</label>
+            <input type="date" id="DatadoEvento" name="DatadoEvento" required> <br>
+        <br>
+        <label for="titulo">Modalidade... </label> <br>
+        <label for="Futebol">Futebol</label>
+        <input type="radio" id="Futebol" name="modalidade" value="Futebol" required> <br>
+        <label for="Basquete">Basquete</label>
+        <input type="radio" id="Basquete" name="modalidade" value="Basquete" required> <br>
+        <label for="Volei">Volei</label>
+        <input type="radio" id="Volei" name="modalidade" value="Volei" required><br>
+        <label for="Atletismo">Atletismo</label>
+        <input type="radio" id="Atletismo" name="modalidade" value="Atletismo" required> <br>
+        <label for="Casamento">Casamento</label>
+        <input type="radio" id="Casamento" name="modalidade" value="Casamento" required>
+        </div>
+        
+        <br>
+        <label for="titulo">Evento aberto ao público? </label> <br>
+        <label for="Sim">Sim</label>
+        <input type="radio" id="sim" name="option" value="sim" required> <br>
+        <label for="Não">Não</label>
+        <input type="radio" id="Não" name="option" value="não" required> <br>
+
+            </select>
+            <br>
+        <button type="submit">Cadastro do Eventos</button>
+    </form>
+    <!-- Aqui mostraremos a lista de seleções cadastradas -->
+    <h3>Seleções Cadastradas</h3>
+    <ul id="listaSelecao"></ul>  
+    <script src="formSelecao.js"></script>
+</body>
+</html>
