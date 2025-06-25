@@ -1,25 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Participantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-    <div class="form-group">
-        <label for="nome">NOME COMPLETO</label>
-        <input type="text" id="nome" name="nome" placeholder="SEU NOME" required>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800">Cadastro de Participantes</h1>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <form id="formParticipantes" class="space-y-4">
+                <div>
+                    <label for="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                
+                <div>
+                    <label for="idade" class="block text-gray-700 font-medium mb-2">Idade</label>
+                    <input type="number" id="idade" name="idade" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Gênero</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="genero" value="Masculino" required class="mr-2">
+                            <span>Masculino</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="genero" value="Feminino" class="mr-2">
+                            <span>Feminino</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="genero" value="Outro" class="mr-2">
+                            <span>Outro</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="evento" class="block text-gray-700 font-medium mb-2">Evento</label>
+                    <select id="evento" name="evento" required class="w-full p-2 border border-gray-300 rounded">
+                        <option value="" disabled selected>Selecione um evento</option>
+                        <option value="Futebol">Futebol</option>
+                        <option value="Vôlei">Vôlei</option>
+                        <option value="Atletismo">Atletismo</option>
+                        <option value="Handebol">Handebol</option>
+                        <option value="Natação">Natação</option>
+                        <option value="Tênis">Tênis</option>
+                        <option value="Basquete">Basquete</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" id="regulamento" name="regulamento" required class="mr-2">
+                        <span>Aceito o regulamento</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">
+                    Cadastrar Participante
+                </button>
+            </form>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Participantes Cadastrados</h2>
+            <div id="listaParticipantes" class="space-y-4"></div>
+        </div>
     </div>
-
-</html><div class="form-group">
-    <label for="datadenascimento">DATA DE NASCIMENTO</label>
-    <input type="date" id="datadenascimento" name="datadenascimento" required>
-<br> <br>
-    <label for="titulo">Gênero</label> <br>
-        <label for="Masculino">Masculino</label>
-        <input type="radio" id="Masculino" name="option" value="Masculino" required> <br>
-        <label for="Feminino">Feminino</label>
-        <input type="radio" id="Feminino" name="option" value="Feminino" required> <br>
-</div>
+    
+    <script src="cadastroParticipantes.js"></script>
 </body>
+</html>
